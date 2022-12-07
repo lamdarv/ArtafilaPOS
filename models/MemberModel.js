@@ -15,6 +15,10 @@ const Member = mongoose.Schema({
     required: true,
     unique: true,
   },
+  address: {
+    type: String,
+    required: true
+  },
 });
 
 export default mongoose.model("Member", Member);

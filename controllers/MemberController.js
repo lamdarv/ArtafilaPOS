@@ -24,8 +24,8 @@ export const saveMember = expressAsyncHandler(async (req, res) => {
   const newMember = new Member({
     member_name: req.body.member_name,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password, 8),
     phone_number: req.body.phone_number,
+    address: req.body.address,
   });
   const member = await newMember.save();
   res.json({
