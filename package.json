@@ -4,14 +4,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": { 
-    "start": "react-scripts start", 
-    "start:lambda": "netlify-lambda serve src/lambda", 
-    "build": "run-p build:**", 
-    "build:app": "react-scripts build", 
-    "build:lambda": "netlify-lambda build src/lambda", 
-    "test": "react-scripts test", 
-    "eject": "react-scripts eject" 
+  "scripts": {
+    "server": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
+    "build": "concurrently \"npm run server\" \"npm run frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   
   "author": "P1 - 3B D4 JTK 2020",
