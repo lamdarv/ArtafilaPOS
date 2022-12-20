@@ -7,10 +7,10 @@
   "scripts": {
     "server": "nodemon server.js",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "build": "concurrently \"npm run server\" \"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Miljan Peric",
+  "author": "P1 - 3B D4 JTK 2020",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
