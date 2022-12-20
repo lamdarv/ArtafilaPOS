@@ -7,8 +7,12 @@
   "scripts": {
     "server": "nodemon server.js",
     "frontend": "npm start --prefix frontend",
-    "build": "concurrently \"npm run server\" \"npm run frontend\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start", 
+    "build": "run-p build:**", 
+    "build:app": "react-scripts build", 
+    "eject": "react-scripts eject"
   },
   
   "author": "P1 - 3B D4 JTK 2020",
